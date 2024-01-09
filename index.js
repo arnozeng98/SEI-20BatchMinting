@@ -62,7 +62,7 @@ const batchMint = async (wallet, address) => {
 
   const signingCosmWasmClient = await getSigningCosmWasmClient(RPC_URL, wallet);
 
-  for (let i = 0; i < 26774; i++) {
+  for (let i = 0; i < 100000; i++) {  // 这里的100000可以改成你想Mint的次数
     try {
       const response = await signingCosmWasmClient.sendTokens(
         address,
